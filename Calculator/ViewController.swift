@@ -233,6 +233,8 @@ class ViewController: UIViewController {
             isChangeArithSign = true
             isMulti = false
             
+            return
+            
         }
         
         
@@ -240,8 +242,11 @@ class ViewController: UIViewController {
     
     @IBAction func equalButton(_ sender: customButton)
     {
-        if storeNumbers[0] != "" && storeNumbers[1] != ""{
-            storeNumbers[2] = getLatestNum
+        storeNumbers[2] = getLatestNum
+        
+        if storeNumbers[0] != "" && storeNumbers[1] != "" && storeNumbers[2] != ""{
+            print("equal...")
+            
             
             getLatestNum = ""
             showLabel.text = ""
